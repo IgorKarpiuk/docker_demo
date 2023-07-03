@@ -56,6 +56,10 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ steps.docker_meta.outputs.tags }}
+          tags: |
+            igork00/docker_demo:latest
+            igork00/docker_demo:1.0.0
+            ghcr.io/IgorKarpiuk/docker_demo:latest
+            ghcr.io/ghcr.io/IgorKarpiuk/docker_demo:1.0.0
           labels: ${{ steps.docker_meta.outputs.labels }}
 
