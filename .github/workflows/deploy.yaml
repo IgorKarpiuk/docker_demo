@@ -24,7 +24,7 @@ jobs:
         with:
           images: | 
             igork00/docker_demo
-            ghcr.io/ghcr.io/igorkarpiuk/docker_demo
+            ghcr.io/igorkarpiuk/docker_demo
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
