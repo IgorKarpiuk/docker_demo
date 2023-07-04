@@ -2,6 +2,9 @@ name: CD to NPM & AWS S3
 
 on: push
 
+permissions:
+  packages: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
