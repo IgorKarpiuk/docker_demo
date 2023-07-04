@@ -47,7 +47,7 @@ jobs:
 
       - name: ECHO
         run: | 
-          echo "${{ steps.docker_meta.outputs.tags }}"
+          echo "${{ secrets.GITHUB_TOKEN }}"
           echo
           echo '${{ steps.docker_meta.outputs.labels }}'
 
