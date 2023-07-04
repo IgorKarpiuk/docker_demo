@@ -7,6 +7,8 @@ on:
 jobs:
   dockerhub:
     if: ${{ github.event.label.name == 'deploy_gh' }}
+    permissions:
+      packages: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
