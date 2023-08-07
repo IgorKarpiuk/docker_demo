@@ -26,10 +26,10 @@ jobs:
         id: docker_meta
         uses: docker/metadata-action@v4
         with:
-          labels: |
-            org.opencontainers.image.version=v1.0
+          # labels: |
+          #   org.opencontainers.image.version=v1.0
           tags: |
-            v1.0.0
+            v1.0.1
             latest
             
           images: | 
