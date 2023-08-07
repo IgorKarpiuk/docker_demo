@@ -33,7 +33,6 @@ jobs:
           # labels: |
           #   org.opencontainers.image.version=v1.0
           tags: |
-            {{ steps.get_version.outputs.*}}
             latest
             
           images: | 
@@ -66,6 +65,8 @@ jobs:
           echo '${{ steps.docker_meta.outputs.labels }}'
           echo
           echo '${{ steps.docker_meta.outputs.tags }}'
+          echo
+          echo '${{ steps.get_version.outputs }}'
 
       - name: Build and push
         uses: docker/build-push-action@v4
