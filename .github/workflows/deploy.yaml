@@ -54,6 +54,8 @@ jobs:
           echo "${{ secrets.GITHUB_TOKEN }}"
           echo
           echo '${{ steps.docker_meta.outputs.labels }}'
+          echo
+          echo '${{ steps.docker_meta.outputs.tags }}'
 
       - name: Build and push
         uses: docker/build-push-action@v4
