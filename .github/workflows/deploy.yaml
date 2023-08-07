@@ -24,7 +24,9 @@ jobs:
 
       - name: Get version
         id: get_version
-        run: ver="$(cat packages/cli/package.json | jq -r '.version')"
+        run: | 
+          ver="$(cat packages/cli/package.json | jq -r '.version')"
+          echo "ver=$ver" >> $GITHUB_OUTPUT 
 
       - name: Docker meta
         id: docker_meta
