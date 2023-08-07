@@ -26,6 +26,8 @@ jobs:
         id: docker_meta
         uses: docker/metadata-action@v4
         with:
+          labels: |
+            maintainer=CrazyMax
           images: | 
             igork00/docker_demo
             ghcr.io/igorkarpiuk/demo2
@@ -60,7 +62,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
-          context: .
+          context: workflow
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
