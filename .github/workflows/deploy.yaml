@@ -29,9 +29,8 @@ jobs:
           labels: |
             org.opencontainers.image.version=v1.0
           tags: |
-            igork00/docker_demo:v1.0.0
-            igork00/docker_demo:latest
-            ghcr.io/igorkarpiuk/demo2:latest
+            v1.0.0
+            latest
             
           images: | 
             igork00/docker_demo
