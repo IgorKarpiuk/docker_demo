@@ -33,7 +33,7 @@ jobs:
           # labels: |
           #   org.opencontainers.image.version=v1.0
           tags: |
-            {{ steps.get_version.outputs.stdout}}
+            {{ steps.get_version.outputs.*}}
             latest
             
           images: | 
